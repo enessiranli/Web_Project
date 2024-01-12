@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - WebDevEdu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WebDevEdu</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="courses.html">Courses</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+      <h2 style="text-align: center;">Latest Blog Posts</h2>
+        <section class="blog-posts">
+
+            <div class="blog-post">
+                <h3>The Art of Responsive Web Design</h3>
+                <p>Discover the key principles and techniques behind creating responsive websites.</p>
+            </div>
+            <div class="blog-post">
+                <h3>JavaScript Frameworks Comparison</h3>
+                <p>Compare and contrast popular JavaScript frameworks to choose the right one for your project.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Python Web Development: Django vs. Flask</h3>
+                <p>Explore the differences and use cases between Django and Flask in Python web development.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Best Practices for Database Design</h3>
+                <p>Understand database design principles and best practices for efficient web applications.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Effective UI/UX Design Patterns</h3>
+                <p>Learn about effective design patterns to enhance user experience in web applications.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Improving Web Accessibility</h3>
+                <p>Discover tips and techniques to enhance web accessibility and reach a wider audience.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Introduction to Git Version Control</h3>
+                <p>Get started with Git version control and its importance in web development projects.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Frontend Development Tools You Should Know</h3>
+                <p>Explore essential frontend development tools that streamline the development process.</p>
+            </div>
+            <div class="blog-post">
+                <h3>SEO Techniques for Web Developers</h3>
+                <p>Learn SEO techniques and strategies to optimize websites for better search engine rankings.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Understanding Web Security Fundamentals</h3>
+                <p>Gain insights into web security fundamentals and best practices to secure web applications.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 WebDevEdu.com</p>
+    </footer>
+</body>
+</html>

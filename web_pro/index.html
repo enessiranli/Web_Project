@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebDevEdu: Your Gateway to Web Development Learning</title>
+
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+    <!-- ... existing content ... -->
+
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+
+    <!-- ... existing content ... -->
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Hava durumu bilgilerini göstereceğiniz bir HTML elementi ekleyin -->
+    <div id="weather-info"></div>
+
+    <!-- JavaScript kodu -->
+    <script src="script.js"></script>
+
+    <!-- ... existing content ... -->
+
+    <style>
+        /* Add your styling for the rating system here */
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .star {
+            cursor: pointer;
+            font-size: 24px;
+            color: #ccc;
+            transition: color 0.2s;
+        }
+
+        .star:hover,
+        .star.active {
+            color: gold;
+        }
+
+        /* Add styling for the comment section */
+        #comment-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #user-comment {
+            width: 70%; /* Adjust the width as needed */
+            margin-top: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        #submit-button {
+            display: block; /* Ensure the button is displayed as a block element */
+            margin: 10px auto; /* Center the button */
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <style>
+    /* Slider styles */
+    .slider {
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            align-items: center; /* Center vertically */
+            width: 300%; /* Set the width of slides container */
+        }
+
+        .slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .slide img {
+            max-width: 100%; /* Ensures the image doesn't exceed the container width */
+            height: auto; /* Keeps image aspect ratio */
+            margin: 0 auto; /* Center horizontally */
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+
+</style>
+
+    <style>
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WebDevEdu</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="courses.html">Tutorials</a>
+                      </div>
+              </li>
+              <li><a href="weather.html">Weather</a></li> <!-- Add this line for the new weather button -->
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>Welcome to Your Gateway in Web Development Learning</h2>
+            <p>Start your journey towards becoming a skilled web developer.</p>
+            <a href="courses.html" class="cta-button">Explore Courses</a>
+        </section>
+
+        <section class="features">
+            <h3>Why Choose WebDevEdu?</h3>
+
+            <div class="feature-box">
+                <div class="feature">
+                    <h4>Comprehensive Courses</h4>
+                    <p>Our courses cover everything from basic HTML/CSS to advanced frameworks.</p>
+                </div>
+                <div class="feature">
+                    <h4>Experienced Instructors</h4>
+                    <p>Learn from industry experts with years of hands-on experience.</p>
+                </div>
+                <div class="feature">
+                    <h4>Interactive Learning</h4>
+                    <p>Engage in interactive sessions and coding exercises to reinforce your skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial">
+            <blockquote>
+                "WebDevEdu helped me transform from a beginner to a confident web developer. Highly recommended!"
+                <cite>- Aysen Cihan</cite>
+            </blockquote>
+        </section>
+
+        <section class="courses">
+            <h3 style="text-align: center;">Our Courses</h3>
+            <div class="course-list">
+                <div class="course">
+                    <h4>Web Development Fundamentals</h4>
+                    <p>An introductory course covering HTML, CSS, and basic JavaScript concepts for beginners.</p>
+                    <div class="image">
+                        <img src="images/htmlcssjs.jpg" alt="Web Development Fundamentals">
+                    </div>
+                    <a href="#" class="course-button">Enroll Now</a>
+                </div>
+                <div class="courses">
+                    <div style="background-color: #FFD700;" class="newone">
+                        <h4>Python for Web Development</h4>
+                        <p>Learn how to use Python and popular frameworks like Django and Flask for web development.</p>
+                        <div class="image">
+                            <img src="images/python.jpg" alt="Python for Web Development">
+                        </div>
+                        <a href="#" class="course-button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses">
+            <h3 style="text-align: center;">Latest Blog Posts</h3>
+            <div class="course-list">
+                <div class="blog-post">
+                    <h4>The Art of Responsive Web Design</h4>
+                    <p>Discover the key principles and techniques behind creating responsive websites.</p>
+                    <div class="image">
+                        <img src="images/responsive.jpg" alt="Responsive Web Design">
+                    </div>
+                    <a href="#" class="blog-button">Read More</a>
+                </div>
+                <div class="blog-post">
+                    <h4>Introduction to Git Version Control</h4>
+                    <p>Get started with Git version control and its importance in web development projects.</p>
+                    <div class="image">
+                        <img src="images/git_version.jpg" alt="Git Version Control">
+                    </div>
+                    <a href="#" class="blog-button">Read More</a>
+                </div>
+                <!-- Add more courses as needed -->
+            </div>
+        </section>
+
+        <section class="external-resources">
+            <h3>Recommended External Resources</h3>
+            <div class="resource">
+                <h4>Codecademy</h4>
+                <p>Interactive coding tutorials covering various programming languages and web development topics.</p>
+                <a href="https://www.codecademy.com/" target="_blank" rel="noopener noreferrer">Visit Codecademy</a>
+            </div>
+            <div class="resource">
+                <h4>Smashing Magazine</h4>
+                <p>A popular web development blog with articles, tutorials, and resources for designers and developers.</p>
+                <a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Visit Smashing Magazine</a>
+            </div>
+            <div class="resource">
+                <h4>freeCodeCamp</h4>
+                <p>A non-profit organization offering free online coding courses and tutorials.</p>
+                <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Visit freeCodeCamp</a>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h3>Contact Us</h3>
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <h2 style="text-align: center;">Slides</h2>
+        <div class="slider">
+              <div class="slides">
+                  <div class="slide"><img src="images/git_version.jpg" alt="Slide 1"></div>
+                  <div class="slide"><img src="images/python.jpg" alt="Slide 2"></div>
+                  <div class="slide"><img src="images/responsive.jpg" alt="Slide 3"></div>
+                  <!-- Add more slides with images as needed -->
+              </div>
+              <div class="prev">&#10094;</div>
+              <div class="next">&#10095;</div>
+          </div>
+
+          <div class="rating" id="rating-container">
+            <span class="star" onclick="rate(1)">&#9733;</span>
+            <span class="star" onclick="rate(2)">&#9733;</span>
+            <span class="star" onclick="rate(3)">&#9733;</span>
+            <span class="star" onclick="rate(4)">&#9733;</span>
+            <span class="star" onclick="rate(5)">&#9733;</span>
+        </div>
+
+        <!-- Comment Section -->
+        <div id="comment-section">
+             <label for="user-comment">Your Feedback:</label>
+             <textarea id="user-comment" placeholder="Enter your comments here..."></textarea>
+             <button id="submit-button" onclick="goToHomePage()">Submit & Go Home</button>
+         </div>
+
+        <!-- Display Rating Message -->
+        <p id="rating-message"></p>
+    </main>
+    </main>
+
+    </main>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        prevBtn.addEventListener('click', () => plusSlides(-1));
+        nextBtn.addEventListener('click', () => plusSlides(1));
+    </script>
+
+    <footer>
+        <p>&copy; 2023 WebDevEdu.com</p>
+    </footer>
+
+    <!-- Add your JavaScript scripts here -->
+    <script>
+        function rate(stars) {
+            // Reset all stars to inactive
+            const allStars = document.querySelectorAll('.star');
+            allStars.forEach(star => star.classList.remove('active'));
+
+            // Activate stars up to the selected rating
+            for (let i = 0; i < stars; i++) {
+                allStars[i].classList.add('active');
+            }
+
+            // Display rating message
+            const ratingMessage = document.getElementById('rating-message');
+            ratingMessage.textContent = `Thank you for rating ${stars} stars!`;
+        }
+
+        function goToHomePage() {
+            // Replace 'your_home_page.html' with the actual file or URL of your home page
+            window.location.href = 'index.html';
+        }
+    </script>
+
+
+</body>
+</html>

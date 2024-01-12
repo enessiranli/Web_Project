@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Check!</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #black;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        color: #white; 
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        color: white;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #white;
+    }
+
+
+    footer {
+        background-color: #333;
+        color: #ddd; /* Lighter text color */
+        text-align: center;
+        padding: 10px 0;
+        margin-top: auto; /* Push the footer to the bottom */
+    }
+
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>WebDevEdu</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Resources</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="courses.html">Tutorials</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="weather.html">Weather</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Add content for your weather checking page here -->
+    <h2>Weather Check before going out!</h2>
+    <p>This is where you can check the weather using the Weather API.</p>
+
+    <!-- City selector list box -->
+    <div id="city-selector">
+        <label for="city">Select a city:</label>
+        <select id="city">
+            <option value="istanbul">Istanbul</option>
+            <option value="ankara">Ankara</option>
+            <option value="izmir">Izmir</option>
+            <!-- Add more cities as needed -->
+        </select>
+    </div>
+
+    <!-- You can add input fields, buttons, etc., for weather checking functionality -->
+    <div id="weather-info"></div>
+</main>
+
+<footer>
+    <p>&copy; 2023 WebDevEdu.com</p>
+</footer>
+
+<!-- Include your existing scripts here -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
+
+<!-- Include additional scripts for weather checking if needed -->
+<script src="weather-script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses - WebDevEdu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WebDevEdu</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html">Home</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <h2 style="text-align: center;">Available Courses</h2>
+
+        <section class="course-list">
+
+            <div class="course">
+                <h3>Web Development Fundamentals</h3>
+                <p>An introductory course covering HTML, CSS, and basic JavaScript concepts for beginners.</p>
+            </div>
+            <div class="course">
+                <h3>Responsive Web Design</h3>
+                <p>Learn to create websites that adapt and work seamlessly across various devices and screen sizes.</p>
+            </div>
+            <div class="course">
+                <h3>JavaScript Masterclass</h3>
+                <p>An advanced course diving deep into JavaScript, covering frameworks and advanced concepts.</p>
+            </div>
+            <div class="course">
+                <h3>Node.js and Express Basics</h3>
+                <p>Explore server-side JavaScript programming with Node.js and Express framework.</p>
+            </div>
+            <div class="course">
+                <h3>React for Frontend Development</h3>
+                <p>Build interactive user interfaces using React library for frontend development.</p>
+            </div>
+            <div class="course">
+                <h3>Python for Web Development</h3>
+                <p>Learn how to use Python and popular frameworks like Django and Flask for web development.</p>
+            </div>
+            <div class="course">
+                <h3>Database Management with SQL</h3>
+                <p>Master SQL fundamentals and database management techniques for web applications.</p>
+            </div>
+            <div class="course">
+                <h3>Version Control with Git</h3>
+                <p>Understand version control and collaboration using Git and GitHub.</p>
+            </div>
+            <div class="course">
+                <h3>UI/UX Design Principles</h3>
+                <p>Explore user interface and user experience design principles for web applications.</p>
+            </div>
+            <div class="course">
+                <h3>Web Accessibility Standards</h3>
+                <p>Learn to create accessible web content following WCAG guidelines for inclusivity.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 WebDevEdu.com</p>
+    </footer>
+</body>
+</html>
